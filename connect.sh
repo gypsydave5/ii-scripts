@@ -4,7 +4,8 @@ ii -s irc.mozilla.org -n gypsydave5 -f "David Wickes" &
 
 sleep 10
 
-echo "/m nickserv identify $IRC_PASSWORD" > ~/irc/irc.freenode.net/in
-echo "/m nickserv identify $IRC_PASSWORD" > ~/irc/irc.mozilla.org/in
+LOGIN_STRING="/nickserv identify $IRC_PASSWORD"
 
-echo "/j #rust-beginners" > ~/irc/irc.mozilla.org/in
+echo $LOGIN_STRING
+echo $LOGIN_STRING > ~/irc/irc.freenode.net/in
+echo $LOGIN_STRING > ~/irc/irc.mozilla.org/in
